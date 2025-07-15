@@ -1,4 +1,16 @@
-//add everything here
+// ./demo/build.gradle
+plugins {
+    id 'java-library' // Use java-library for a library module
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':utils') // Depend on the local utils module
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
 
 test {
     useJUnitPlatform()
