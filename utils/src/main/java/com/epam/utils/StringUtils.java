@@ -5,7 +5,9 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
-        if(str == null) return false
+        if(str == null){
+          return false;
+        }
         if (str.length() > 1 && str.startsWith("0") && !str.startsWith("0.")) {
             return false;
         }
